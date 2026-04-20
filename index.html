@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NeuroSweep — 智能扫地机器人</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PureNest Living | NeuroSweep Robot Vacuum Cleaner</title>
   <style>
-    /* —— 全局 & 布局 —— */
+    /* Global layout */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       display: flex;
       flex-direction: column;
-      font-family: "Microsoft YaHei", sans-serif;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
       color: #333;
+      background: #ffffff;
     }
     main { flex: 1; }
 
-    /* —— 英雄区（Hero） —— */
+    /* Hero section */
     .hero {
       position: relative;
-      background: url('hero.jpg') center/cover no-repeat;
+      background: url("hero.jpg") center/cover no-repeat;
       height: 500px;
       display: flex;
       align-items: center;
@@ -29,12 +30,25 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
     }
+
+    /* Brand name in top left */
+    .hero-brand {
+      position: absolute;
+      top: 33px;
+      left: 20px;
+      z-index: 2;
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
     .hero-content {
       position: relative;
       text-align: center;
-      color: #fff;
+      color: #ffffff;
       z-index: 1;
     }
     .hero-content h1 {
@@ -48,45 +62,42 @@
     .hero-content .price-info {
       margin-bottom: 20px;
     }
-    /* —— 醒目的嗨享价样式 —— */
+
+    /* Highlighted offer text */
     .hero-content .hi-price {
       display: inline-block;
-      background: rgba(255,255,255,0.90);
-      color: #ff5722;
+      color: #ffffff;
       font-size: 22px;
       font-weight: bold;
       padding: 8px 16px;
       border-radius: 6px;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.15);
     }
 
-    /* —— “跳动”动画 —— */
+    /* Button bounce animation */
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50%      { transform: translateY(-8px); }
     }
     .hero-content .btn {
       padding: 12px 24px;
-      background: #FF6F6F;
-      color: #fff;
+      background: #ff6f6f;
+      color: #ffffff;
       border: none;
       border-radius: 4px;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
-
-      /* 无限循环 2s 一次 */
       animation: bounce 2s ease-in-out infinite;
       transform: translateZ(0);
       will-change: transform;
     }
     .hero-content .btn:hover {
-      /* hover 时加速 */
       animation-duration: 1s;
     }
 
-    /* —— 特色服务区（Features） —— */
+    /* Feature cards */
     .features {
       max-width: 1200px;
       margin: 40px auto;
@@ -97,9 +108,9 @@
       justify-content: space-between;
     }
     .feature-card {
-      background: #fff;
+      background: #ffffff;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       width: 260px;
       overflow: hidden;
       display: flex;
@@ -120,75 +131,81 @@
     }
     .feature-card .info p {
       font-size: 14px;
-      color: #666;
+      color: #666666;
     }
 
-    /* —— 页脚 —— */
+    /* Footer */
     footer {
-      background: #222;
-      color: #ccc;
+      background: #222222;
+      color: #cccccc;
       text-align: center;
       padding: 12px 0;
       font-size: 14px;
     }
-    footer a { color: #ccc; text-decoration: none; }
+    footer a {
+      color: #cccccc;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
 <main>
-  <!-- 主视觉在最上 -->
   <section class="hero">
+    <!-- Brand name -->
+    <div class="hero-brand">PureNest Living</div>
+
     <div class="hero-content">
-      <h1>NeuroSweep 智能扫地机器人推荐</h1>
-      <p>智能扫地机器人，解决低矮的缝隙盲区，释放双手省心又安心</p>
+      <h1>NeuroSweep Robot Vacuum Cleaner</h1>
+      <p>Designed for a relaxed and effortless home cleaning experience</p>
       <div class="price-info">
-        <span class="hi-price">嗨享价：3899元/台</span>
+        <span class="hi-price">Online booking on this website for all product pre-orders</span>
       </div>
-      <button class="btn" onclick="location.href='booking.html'">立即预订</button>
+      <button class="btn" onclick="location.href='booking.html'">Confirm pre-order</button>
     </div>
   </section>
 
-  <!-- 四张特色卡片紧随其下 -->
   <section class="features">
-    <div class="feature-card">
-      <img src="p1.jpg" alt="滚筒活水洗地"/>
-      <div class="info">
-        <h3>滚筒活水洗地</h3>
-        <p>高倍清洁压强，拒绝以脏拖脏</p>
-      </div>
+  <div class="feature-card">
+    <img src="p1.jpg" alt="Home cleaning setting" />
+    <div class="info">
+      <h3>Home cleaning setting</h3>
+      <p>Used in ordinary apartments and homes to help keep floors and living areas tidy.</p>
     </div>
-    <div class="feature-card">
-      <img src="p2.jpg" alt="AI导航清洁专家"/>
-      <div class="info">
-        <h3>AI导航清洁专家</h3>
-        <p>深度学习房型，科学规划全屋路径</p>
-      </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p2.jpg" alt="Floor cleaning function" />
+    <div class="info">
+      <h3>Floor cleaning function</h3>
+      <p>Performs regular cleaning runs to remove everyday dust and visible dirt on the floor.</p>
     </div>
-    <div class="feature-card">
-      <img src="p3.jpg" alt="边角清洁大师"/>
-      <div class="info">
-        <h3>边角清洁大师</h3>
-        <p>深入墙边桌脚，精准避障不漏扫</p>
-      </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p3.jpg" alt="Convenient daily use" />
+    <div class="info">
+      <h3>Convenient daily use</h3>
+      <p>Starts with one main button and moves around furniture with only limited supervision.</p>
     </div>
-    <div class="feature-card">
-      <img src="p4.jpg" alt="专属清洁助理"/>
-      <div class="info">
-        <h3>专属清洁助理</h3>
-        <p>自动回充、语音控制，解锁无忧体验</p>
-      </div>
+  </div>
+
+  <div class="feature-card">
+    <img src="p4.jpg" alt="Delivery and support" />
+    <div class="info">
+      <h3>Delivery and support</h3>
+      <p>Standard home delivery and basic customer support are provided with this product.</p>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
-<!-- 固定在底部的页脚 -->
 <footer>
-  ExploreAsia Travel © 2025 │ 服务热线：400-123-4567 │ 邮箱：info@exploreasia.travel
+  PureNest Living © 2025 | Customer service: 400-234-5678 | Email: info@purenest.living
 </footer>
 
 <script>
-  // 打开时滚到顶部
+  // Scroll to top on load
   window.onload = () => window.scrollTo(0, 0);
 </script>
 
